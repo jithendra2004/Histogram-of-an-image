@@ -27,8 +27,8 @@ Register Number: 212221230043
 ~~~
 import cv2
 import matplotlib.pyplot as plt
-Gray_image = cv2.imread("image.png")
-Color_image = cv2.imread("1.png",-1)
+Gray_image = cv2.imread("1.jfif")
+Color_image = cv2.imread("thanos.webp",-1)
 cv2.imshow("Gray Image",Gray_image)
 cv2.imshow("Colour Image",Color_image)
 cv2.waitKey(0)
@@ -38,6 +38,9 @@ cv2.destroyAllWindows()
 # Display the histogram of gray scale image and any one channel histogram from color image:
 ~~~
 import numpy as np
+import cv2
+Gray_image = cv2.imread("1.jfif")
+Color_image = cv2.imread("thanos.webp",-1)
 import matplotlib.pyplot as plt
 gray_hist = cv2.calcHist([Gray_image],[0],None,[256],[0,256])
 color_hist = cv2.calcHist([Color_image],[0],None,[256],[0,256])
@@ -62,7 +65,7 @@ cv2.destroyAllWindows()
 # Write the code to perform histogram equalization of the image. 
 ~~~
 import cv2
-gray_image = cv2.imread("shinchan.jpg",0)
+gray_image = cv2.imread("1.jfif",0)
 cv2.imshow('Grey Scale Image',gray_image)
 equ = cv2.equalizeHist(gray_image)
 cv2.imshow("Equalized Image",equ)
@@ -71,14 +74,14 @@ cv2.destroyAllWindows
 ~~~
 ## OUTPPUT:
 ### Input Grayscale Image and Color Image
-![output](./img/1.png)
+![output](1.png)
 
 ### Histogram of Grayscale Image and any channel of Color Image
-![output](./img/2.png)
-![output](./img/3.png)
+![output](2.png)
+![output](3.png)
 
 ### Histogram Equalization of Grayscale Image
-![output](./img/4.png)
+![output](4.png)
 
 ## RESULT: 
 Thus the histogram for finding the frequency of pixels in an image with pixel values ranging from 0 to 255 is obtained. Also,histogram equalization is done for the gray scale image using OpenCV.
